@@ -1,13 +1,16 @@
 :root {
-    --background-color: white;
-    --primary-color: blue;
-    --accent-color: red;
+    --background-color: #fff1f2;
+    --sub-background-color: #fee2e2;
+    --primary-color: #fb7185;
+    --accent-color: #22c55e;
     --text-color-primary: black;
     --text-color-secondary: gray;
 }
 
 * {
     margin: 0px;
+    list-style-type: none;
+    font-family: "Roboto";
 }
 
 #container {
@@ -20,22 +23,29 @@
 #topNav {
     display: grid;
     grid-template: 1fr / 2fr 1fr;
-    background-color: blue;
+    background-color: var(--background-color);
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
 #header {
-    background-color: aquamarine;
+    background-color: var(--background-color);
     grid-column: 2 /3;
     grid-row: 2 / 3;
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
+
 #logo {
-    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
 }
 
 #leftNav {
-    background-color: lightblue;
+    background-color: var(--primary-color);
     grid-row: 2 / 4;
 }
 
@@ -44,12 +54,12 @@
     grid-template: 1fr 5fr 1fr 5fr / 3fr 1fr;
     height: 100%;
     width: 100%;
-    background-color: gray;
+    background-color: var(--sub-background-color);
     grid-row-start: 3;
     grid-column-start: 2;
 }
 
-#spacer{
+#spacer {
     height: 50px;
 }
 
@@ -69,10 +79,15 @@
 }
 
 #announcementContainer {
-    grid-row:2/3;
+    grid-row: 2/3;
     grid-column: 2/3;
     display: grid;
     grid-template: repeat(3, 1fr) / 1fr;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 30%;
+    border-radius: 15px;
+    background-color: #fb7185;
 }
 
 #trending {
@@ -80,10 +95,147 @@
     grid-column: 2/3;
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 30%;
+    border-radius: 15px;
+    background-color: #fb7185;
+
 }
 
 #projects {
-    background-color: lightgreen;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    padding: 2%;
     grid-row: 2/5;
     grid-column: 1/2;
+
+}
+
+.svg-icon {
+    height: 25px;
+    width: 25px;
+}
+
+#logoImg {
+    height: 100px;
+    width: 100px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#searchbar {
+    width: 80%;
+    border-radius: 25px;
+    height: 33%;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.item {
+    position: relative;
+    border-left: 5px solid red;
+    /* border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black; */
+    font-size: 12px;
+    background-color: var(-wheatwheat-background-color);
+    width: clamp(200px, 45%, 280px);
+    height: 30%;
+    padding: 1%;
+    border-radius: 5%;
+    background-color: var(--background-color);
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.5);
+
+}
+
+.item>p {
+    width: 2225px25px25px0px;
+}
+
+.label {
+    display: flex;
+    align-items: flex-end;
+}
+
+.iconContainer {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    bottom: 25px;
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 25px;
+    width: 33%;
+}
+
+.pfp {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+#leftNav>ul>* {
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+li>p {
+    font-size: 25px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+#username {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    background-color: var(--primary-color);
+    width: 100px;
+    height: 33px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+#headerRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 350px;
+    padding-right: 250px;
 }

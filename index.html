@@ -1,79 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="container">
         <div id="logo">
-            <img src="" alt="">
+            <img src="img/svg/abacus.svg" alt="" id="logoImg">
             <h1>Dashboard</h1>
         </div>
         <div id="topNav">
-            <div>
-                <img src="" alt="">
-                <input type="text">
+            <div id="searchContainer">
+                <img src="img/svg/magnify.svg" alt="" class="svg-icon">
+                <input type="text" id="searchbar">
             </div>
-            <div>
-                <p>test</p>
+            <div class="row">
+                <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                <img src="" alt="" class="profilePic">
+                <p>Griffin Leventhal</p>
             </div>
         </div>
-        <div id="header"></div>
+        <div id="header">
+            <div id="headerLeft">
+                <!-- <img src="" alt="" class="pfp"> -->
+                <p>Hi there,<br> <span id="username">Griffin Leventhal (@GLev)</span></p>
+            </div>
+            <div id="headerRight">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </div>
         <div id="leftNav">
             <ul>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/home.svg" alt="" class="svg-icon">
+                    <p>Home</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/card-account-details.svg" alt="" class="svg-icon">
+                    <p>Profile</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/message.svg" alt="" class="svg-icon">
+                    <p>Messages</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/clock-time-three-outline.svg" alt="" class="svg-icon">
+                    <p>History</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/note-multiple.svg" alt="" class="svg-icon">
+                    <p>Tasks</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title</p>
+                    <img src="img/svg/account-group.svg" alt="" class="svg-icon">
+                    <p>Communities</p>
                 </li>
             </ul>
             <div id="spacer"></div>
             <ul>
                 <li>
-                    <img src="" alt="">
-                    <p>title2</p>
+                    <img src="img/svg/cog-box.svg" alt="" class="svg-icon">
+                    <p>Settings</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title2</p>
+                    <img src="img/svg/help-box.svg" alt="" class="svg-icon">
+                    <p>Support</p>
                 </li>
                 <li>
-                    <img src="" alt="">
-                    <p>title2</p>
+                    <img src="img/svg/shield-account.svg" alt="" class="svg-icon">
+                    <p>Privacy</p>
                 </li>
             </ul>
         </div>
         <div id="content">
-            <div id="label1">Your Projects</div>
-            <div id="projects"></div>
-            <div id="label2">Announcements</div>
+            <div id="label1" class="label">Your Projects</div>
+            <div id="projects">
+                <div class="item">
+                    <h4>Super Cool Project</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veritatis labore, voluptatibus
+                        asperiores, quas hic corporis mollitia earum reprehenderit ratione, a non laudantium
+                        consequuntur adipisci odit cupiditate quis? At, cumque.</p>
+                    <div class="iconContainer">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>Super Cool Project</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veritatis labore, voluptatibus
+                        asperiores, quas hic corporis mollitia earum reprehenderit ratione, a non laudantium
+                        consequuntur adipisci odit cupiditate quis? At, cumque.</p>
+                    <div class="iconContainer">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                        <img src="img/svg/bell-ring-outline.svg" alt="" class="svg-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="label" id="label2">Announcements</div>
             <div id="announcementContainer"></div>
-            <div id="label3">Trending</div>
+            <div class="label" id="label3">Trending</div>
             <div id="trending"></div>
         </div>
     </div>
 </body>
+
 </html>
